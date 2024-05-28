@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IP Address Tracker</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+    <script defer src="/src/script.js"></script>
+   
+  </head>
+  <body>
+    <header
+      class="h-[50vh] w-full bg-[url('/images/pattern-bg-desktop.png')] bg-no-repeat bg-cover"
+    >
+      <div class="py-8 flex flex-col justify-center">
+        <h1
+          class="uppercase font-bold text-red text-3xl text-center text-white"
+        >
+          Ip Address Tracker
+          <div class="w-full p-8 flex items-center justify-center">
+            <input
+              type="text"
+              placeholder="Search for any IP address or domain "
+              class="w-[30%] h-[50px] rounded-tl-xl rounded-bl-xl text-[18px] px-8 text-black"
+              id="address"
+            />
+            <button id="button">
+              <img
+                src="/images/icon-arrow.svg"
+                alt="right-arrow"
+                class="bg-black p-[19px] rounded-tr-xl rounded-br-xl"
+              />
+            </button>
+          </div>
+        </h1>
+      </div>
+    </header>
+
+    <section class="w-full h-[20vh] flex justify-center mt-[-80px] relative z-99 ">
+      <div class="bg-white h-full w-[70%] flex rounded-3xl relative z-50 mt-[-80px] ">
+        <div
+          class="w-[25%] font-bold text-lg text-gray-400 flex flex-col items-center py-6"
+        >
+          <h1 class="text-center">IP Address</h1>
+          <p class="font-semibold text-black text-2xl" id="ipaddress">
+            Loading...
+
+          </p>
+        </div>
+        <div
+          class="w-[25%] font-bold text-lg text-gray-400 flex flex-col items-center py-6"
+        >
+          <h1 class="text-center">Location</h1>
+          <p class="font-semibold text-black text-2xl" id="location">
+            Loading...
+
+          </p>
+        </div>
+        <div
+          class="w-[25%] font-bold text-lg text-gray-400 flex flex-col items-center py-6"
+        >
+          <h1 class="text-center">Time zone</h1>
+          <p class="font-semibold text-black text-2xl" id="timezone">
+            Loading...
+
+          </p>
+        </div>
+        <div
+          class="w-[25%] font-bold text-lg text-gray-400 flex flex-col items-center py-6"
+        >
+          <h1 class="text-center">Isp</h1>
+          <p class="font-semibold text-black text-2xl" id="isp">
+            Loading...
+
+          </p>
+        </div>
+      </div>
+      <section class="w-[100%] absolute z-0 ">
+          <div id="map" class="w-full h-[60vh]">
+  
+          </div>
+      </section>
+    </section>
+
+
+    
+  </body>
+</html>
